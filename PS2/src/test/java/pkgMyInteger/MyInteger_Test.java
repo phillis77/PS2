@@ -27,50 +27,25 @@ public class MyInteger_Test {
 	}
 
 	
-	MyInteger Firsttest = new MyInteger(80);
-
 	@Test
-	public void Test1() {
-		
-
-		assertTrue(Firsttest.isEven());
-
-		assertFalse(Firsttest.isOdd());
-
-		assertFalse(Firsttest.isPrime());
-		}
-	MyInteger Secondtest = new MyInteger(29);
-	
-	
-	@Test
-	public void Test2() {
-		
-		assertFalse(Secondtest.isEven());
-
-		assertTrue(Secondtest.isOdd());
-
-		assertTrue(Secondtest.isPrime());
-		}
-	
-	@Test
-	public void Test3(){
-		assertTrue(MyInteger.isEven(8));
-		assertTrue(MyInteger.isOdd(9));
-		assertTrue(MyInteger.isPrime(5));
+	public void testEven() {
+		MyInteger myInt = new MyInteger(2);
+		assertTrue(myInt.isEven());
 	}
 
-	
-	@Test
-	public void Test4(){
-		assertFalse(MyInteger.isEven(15));
-		assertFalse(MyInteger.isOdd(2));
-		assertFalse(MyInteger.isPrime(15));
+	public void testOdd() {
+		MyInteger myInt = new MyInteger(3);
+		assertTrue(myInt.isEven());
 	}
 
-	@Test
-	public void Test5(){
-		MyInteger lasttest = new MyInteger(25);	
-		assertTrue(lasttest.equals(25));
-		assertTrue(lasttest.equals(25));
+	public void testPrime() {
+		MyInteger myInt = new MyInteger(23);
+		assertTrue(myInt.isPrime());
 	}
+
+	public void testEqual() {
+		MyInteger myInt = new MyInteger(13);
+		assertTrue(myInt.isEquals(myInt));
+	}
+
 }

@@ -1,88 +1,68 @@
 package pkgMyinteger;
 public class MyInteger {
 	private int iValue;
-	public MyInteger(int num){
-		iValue=num;
+	
+	public MyInteger(int iValue) {
+		this.iValue = iValue;
 	}
-	public int get(){
+
+	public int getiValue() {
 		return iValue;
 	}
-	public boolean isEven(){
-		if (iValue%2==0){
-			return true;
-		}
-		else{
-		return false;
-		}
-	}
-		
-	public boolean isOdd(){
-		if (iValue%2!=0){
-			return true;
-		}
-		else{
-		return false;
-		}
-	}
-	public boolean isPrime(){
-		
-		for (int i=2; i<iValue; i++ ){
-			if(iValue % i==0 ){
-				return false;
-			}
-					
-		}
-		return true;
-		
-			
 
-	}
-	public static boolean isEven(int iValue){
-		if (iValue%2==0){ 
-			return true;
-		}
-		else{
-		return false;
-		}
-	}
-	public static boolean isOdd(int iValue){
-		if (iValue%2!=0){
-			return true;
-		}
-		else{
-		return false;
-		}
+	public void setiValue(int iValue) {
+		this.iValue = iValue;
 	}
 	
+	public boolean isEven() {
+		
+		return (iValue % 2 == 0);
+	}
 	
-	public static boolean isPrime(int iValue){
-		for (int i=2; i<iValue; i++ ){
-			if(iValue % i==0 ){
-				return false;
-			}
+	public boolean isOdd() {
+		return !isEven();
+	}
+	
+	public boolean isPrime() {
+		boolean isPrime = true;
+		for (int i = 2 ; i < getiValue() && (isPrime); i++) {
+			 if (getiValue() % i == 0) {
+				 isPrime = false;
+			 }
 		}
-		return true;
-		
-			
+		return isPrime;
 	}
-	public static boolean isEven(MyInteger iValue){
-		return iValue.isEven();
-		
+	
+	public static boolean isEven(int iValue) {
+		MyInteger myInt = new MyInteger(iValue);
+		return myInt.isEven();
 	}
-	public static boolean isOdd(MyInteger iValue){
-		return iValue.isOdd();
+	
+	public static boolean isOdd(int iValue) {
+		MyInteger myInt = new MyInteger(iValue);
+		return myInt.isOdd();
 	}
-	public static boolean isPrime(MyInteger iValue){
-		return iValue.isPrime();
-		
+	
+	public  static boolean isPrime(int iValue) {
+		MyInteger myInt = new MyInteger(iValue);
+		return myInt.isPrime();
 	}
-	public boolean equals(int a){
-		boolean equal1=this.iValue==a;
-		return equal1;
+	
+	public static boolean isEven(MyInteger myInt) {
+		return myInt.isEven();
 	}
-	public boolean equals(MyInteger b){
-		boolean equal2=this.iValue==b.iValue;
-		return equal2;
+	public static boolean isOdd(MyInteger myInt) {
+		return myInt.isOdd();
+	}
+	public static boolean isPrime(MyInteger myInt) {
+		return myInt.isPrime();
+	}
+	
+	public boolean isEquals(int iValue) {
+		return (this.iValue == iValue);
+	}
+	public boolean isEquals(MyInteger myInt) {
+		return isEquals(myInt);
 	}
 
 }
