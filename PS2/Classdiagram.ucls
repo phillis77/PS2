@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.1.13" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+<class-diagram version="1.2.1" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="pkgMyinteger.MyInteger" project="PS2" 
-    file="/PS2/src/main/java/pkgMyinteger/MyInteger.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="317" width="177" x="129" y="9"/>    
+  <class id="1" language="java" name="pkgMyInteger.MyInteger_Test" project="PS2" 
+    file="/PS2/src/test/java/pkgMyInteger/MyInteger_Test.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="485" y="156"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
+  <class id="2" language="java" name="pkgMyInteger.MyInteger" project="PS2" 
+    file="/PS2/src/test/java/pkgMyInteger/MyInteger.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="335" width="179" x="84" y="-28"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="3">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
