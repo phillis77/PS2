@@ -32,20 +32,20 @@ public class MyInteger_Test {
 		MyInteger myInt = new MyInteger(2);
 		assertTrue(myInt.isEven());
 	}
-
+	@Test
 	public void testOdd() {
 		MyInteger myInt = new MyInteger(3);
-		assertTrue(myInt.isEven());
+		assertTrue(myInt.isOdd());
 	}
-
+	@Test
 	public void testPrime() {
 		MyInteger myInt = new MyInteger(23);
 		assertTrue(myInt.isPrime());
 	}
-
+	@Test
 	public void testEqual() {
 		MyInteger myInt = new MyInteger(13);
-		assertTrue(myInt.isEquals(myInt));
+		assertTrue(myInt.isEquals(13));
 	}
 
 }
